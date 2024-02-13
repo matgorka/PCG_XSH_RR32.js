@@ -23,6 +23,7 @@
     }
 
     seed(v) {
+      v %= 2n**64n;
       this.state = v + increment;
       this.next();
     }
