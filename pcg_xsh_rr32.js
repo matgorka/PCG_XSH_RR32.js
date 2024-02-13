@@ -19,7 +19,7 @@
       x         >>= 27n;
       x          %= 2n**32n;
 
-      return Number(rotr(x, count)) % 2**32;
+      return Number(rotr(x, count) % 2n**32n);
     }
 
     seed(v) {
