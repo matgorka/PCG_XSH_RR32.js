@@ -1,4 +1,4 @@
-(g => {
+(() => {
   const multiplier = 6364136223846793005n,
         increment  = 1442695040888963407n,
         rotr       = (x, r) => x >> r | x << (32n - r);
@@ -32,5 +32,5 @@
     }
   }
 
-  Object.assign(g, { PCG_XSH_RR32 });
-})(this);
+  Object.assign(globalThis, { PCG_XSH_RR32 });
+})();
