@@ -1,7 +1,7 @@
 (g => {
   const multiplier = 6364136223846793005n,
         increment  = 1442695040888963407n,
-        rotr       = (x, r) => x >> r | x << ((2n ** 32n - r) & 31n);
+        rotr       = (x, r) => x >> r | x << (32n - r);
 
   class PCG_XSH_RR32 {
     state = 5573589319906701683n;
