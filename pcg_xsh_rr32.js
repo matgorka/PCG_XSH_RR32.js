@@ -22,7 +22,10 @@
       return Number(rotr(x, count) % 2n**32n);
     }
 
-    seed(v) {
+    constructor(v) {
+      if (v == null)
+        return;
+
       v %= 2n**64n;
       this.state = v + increment;
       this.next();
